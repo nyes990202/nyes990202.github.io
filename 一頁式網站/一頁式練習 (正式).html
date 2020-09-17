@@ -1,0 +1,2092 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png"
+        href="https://b1.pngbarn.com/png/991/840/league-of-legends-free-icon-lol-icon-blue-1-png-clip-art.png" />
+    <title>League of legend</title>
+
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        #nav {
+            width: 100%;
+            height: 200px;
+            background-color: rgb(0, 0, 0);
+            padding: 0 0 0 200px;
+            position: relative;
+            background-image: url('http://dl.garenanow.com/lol/loltw/web/images/banner/224.jpg');
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        #LOGO {
+            width: 300px;
+            height: 200px;
+
+            position: absolute;
+            background-image: url('https://lolstatic-a.akamaihd.net/frontpage/apps/prod/signup/en_GB/9c86a6a9842ae0147cadf9e8672e285993ed89b8/assets/en_GB/assets/lol-logo.png');
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            z-index: 999;
+
+
+
+        }
+
+
+        #banner {
+            width: 100%;
+            height: calc(100vh - 300px);
+            background-color: black;
+            position: relative;
+            overflow: hidden;
+
+        }
+
+        .coverflow {
+            width: 1280px;
+            height: 100%;
+            position: relative;
+            left: 50%;
+            transform: translatex(-50%);
+
+        }
+
+
+
+
+        .coverflow>a {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            /*當圖片數量增加，影片長度需更改，變為5s*圖片數量*/
+            animation: silder 9s linear infinite;
+        }
+
+        .coverflow>a>img {
+            max-width: 100%;
+        }
+
+        /*動畫關鍵影格*/
+
+
+        @keyframes silder {
+            3% {
+                opacity: 1;
+                filter: alpha(opacity=100);
+            }
+
+            27% {
+                opacity: 1;
+                filter: alpha(opacity=100);
+            }
+
+            30% {
+                opacity: 0;
+                filter: alpha(opacity=0);
+            }
+        }
+
+        /*每個圖片各延遲5秒*/
+        .coverflow>a:nth-child(3) {
+            -webkit-animation-delay: 6s;
+            animation-delay: 6s;
+        }
+
+        .coverflow>a:nth-child(2) {
+            -webkit-animation-delay: 3s;
+            animation-delay: 3s;
+        }
+
+        .coverflow>a:nth-child(1) {
+            -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+        }
+
+        /*滑入時停止播放*/
+        /* .coverflow:hover>a {
+            -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+        } */
+
+        #bar {
+            width: 100%;
+            height: 100px;
+            background-color: rgb(0, 0, 0);
+            padding: 10px 0 0 0;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        ul {
+            width: 100%;
+            height: 100%;
+            padding-left: 28%;
+            position: relative;
+            margin: 0;
+
+        }
+
+
+
+        ul li {
+            width: 150px;
+            height: 80px;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+
+            float: left;
+            margin: 10px 20px 0 20px;
+            color: white;
+            font-size: 25px;
+            font-weight: 900;
+            text-align: center;
+            line-height: 80px;
+            transition: 0.3s;
+            position: relative;
+            list-style: none;
+
+        }
+
+        li a {
+            text-decoration: none;
+            color: white;
+
+        }
+
+        #bar li::before {
+            content: '';
+            width: 0px;
+            height: 10px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: 0.5s;
+
+        }
+
+
+
+        #bar li:hover::before {
+            content: '';
+            width: 150px;
+            height: 10px;
+            background-color: rgb(255, 255, 255);
+            color: red;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+
+        }
+
+
+
+        ul li:active {
+            background-color: rgba(255, 255, 255, 0.356);
+        }
+
+        #section1 {
+            background-color: black;
+            width: 100%;
+            height: 100vh;
+
+        }
+
+        #sc1-img-1 {
+            width: 450px;
+            height: 100vh;
+            float: left;
+
+            background-image: url('http://waifu.clan.su/_ld/1/57405926.jpg');
+            background-position: center;
+            background-size: cover;
+
+
+        }
+
+        #sc1-img-2 {
+            width: 550px;
+            height: 100vh;
+            float: right;
+
+            background-image: url('https://i.kym-cdn.com/photos/images/original/001/428/741/d88.png');
+            background-position: left;
+
+
+        }
+
+        #section1 .container {
+
+            position: relative;
+            background-color: #242526;
+        }
+
+
+
+        #section1 .img {
+            position: absolute;
+            right: 0;
+            top: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: 1280px;
+            height: auto;
+            background-size: contain;
+            overflow: hidden;
+        }
+
+        #section1 video {
+            height: 100%;
+            width: 200%;
+            position: absolute;
+            left: -50%;
+        }
+
+
+
+        #section1 .title {
+
+
+            color: white;
+            position: absolute;
+            top: 20px;
+            font-size: 36px;
+            font-weight: 600;
+            line-height: 100px;
+            font-family: fantasy;
+            letter-spacing: 1px;
+            white-space: nowrap;
+            left: 415px;
+            top: 20px;
+            text-align: right;
+
+        }
+
+        #section1 .title::before {
+            content: '';
+            width: 345px;
+            height: 10px;
+            background-color: white;
+            position: absolute;
+            top: calc(50% - 5px);
+
+            left: -77%;
+
+
+        }
+
+        #section1 .title::after {
+            content: '';
+            width: 345px;
+            height: 10px;
+            background-color: white;
+            position: absolute;
+            top: calc(50% - 5px);
+
+        }
+
+
+        #section1 .text {
+            width: 600px;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            left: calc(50% + 20px);
+            top: 60%;
+            color: white;
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+
+
+        #section2 {
+            background-color: black;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+
+
+        }
+
+        #sc2-filter {
+            width: 100%;
+            height: 100vh;
+            background-image: url('https://tasmanianartsguide.com.au/wp-content/uploads/2014/11/Philip-Wolfhagen-2_Exaltationjpg-750x330.jpg');
+            background-position: bottom;
+            background-size: contain;
+            filter: blur(3px);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+
+        }
+
+        #section2 .container {
+
+            height: 100vh;
+            background-color: #242526;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            background-image: url('https://lolstatic-a.akamaihd.net/frontpage/apps/prod/harbinger-l10-website/en-us/production/en-us/static/hud-2-2d4279d50f4fffe4012eda7c7f31b5fd.jpg');
+            background-size: cover;
+            background-position: bottom;
+            position: relative;
+            background-attachment: fixed;
+        }
+
+        #section2 .title {
+            width: 600px;
+            height: 100px;
+            /* background-color: gray; */
+            margin: 0 0 420px 0;
+            line-height: 100px;
+            padding-left: 150px;
+            font-size: 50px;
+            font-family: Microsoft YaHei;
+            position: relative;
+        }
+
+        #section2 .text {
+            width: 1000px;
+            height: 300px;
+            background-image: url('../2020-08-28-一頁式網站/一頁式素材/狀態列.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+
+        }
+
+        .showbox {
+            width: 900px;
+            height: 450px;
+            position: absolute;
+            bottom: 90%;
+            left: calc(50% - 450px);
+            background-image: url('../2020-08-28-一頁式網站/一頁式素材/遊戲大廳.png');
+            background-position: top;
+            background-size: 95%;
+            background-repeat: no-repeat;
+
+            transition: 0.3s;
+            transform: scale(1, 1);
+            transform-origin: center;
+
+        }
+
+        #fpage {
+
+            background-color: rgba(128, 128, 128, 0.582);
+            position: absolute;
+            top: 87%;
+            left: calc(50% - 75px);
+            padding: 20px;
+            font-size: 30px;
+            font-weight: 900;
+            font-family: Microsoft JhengHei;
+            color: rgb(19, 20, 19);
+            border-radius: 10px;
+            transition: 0.3s;
+
+        }
+
+        #fpage::before {
+            content: '';
+            width: 0px;
+            height: 10px;
+
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: 0.5s;
+
+        }
+
+
+
+        #fpage:hover::before {
+            content: '';
+            width: 170px;
+            height: 10px;
+            background-color: rgb(255, 255, 255);
+            color: red;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+
+        }
+
+
+        #fpage:hover {
+            background-color: gray;
+        }
+
+        #fpage:active {
+            background-color: rgb(146, 84, 84);
+        }
+
+        #fpage:active~.showbox {
+            background-color: rgb(146, 84, 84);
+        }
+
+        #QWER {
+
+            width: 378px;
+            height: 82px;
+            position: absolute;
+            top: 71px;
+            left: 193px;
+            background-image: url('https://lolstatic-a.akamaihd.net/frontpage/apps/prod/harbinger-l10-website/en-us/production/en-us/static/abilities-38ba25f77f8a288f904432f1edccfc8c.png');
+            background-size: cover;
+            background-position: center;
+
+
+        }
+
+        #QWER-mask {
+            width: 381px;
+            height: 76px;
+            background-color: rgba(0, 0, 0, 0.3);
+            transition: 0.3s;
+            z-index: 10;
+
+            position: absolute;
+            top: 24%;
+            left: 19%;
+        }
+
+
+
+        #DF {
+
+            width: 117px;
+            height: 58px;
+            position: absolute;
+            top: 73px;
+            left: 589px;
+            background-image: url('https://lolstatic-a.akamaihd.net/frontpage/apps/prod/harbinger-l10-website/en-us/production/en-us/static/spells-7f089c1a8f56f6d2af62bd0ad9a60916.png');
+            background-size: cover;
+            background-position: center;
+            background-color: black;
+
+        }
+
+        #DF-mask {
+            width: 117px;
+            height: 58px;
+            background-color: rgba(0, 0, 0, 0.3);
+            transition: 0.3s;
+            z-index: 10;
+
+            position: absolute;
+            top: 24%;
+            left: 59%;
+
+        }
+
+
+
+        #Items {
+
+            width: 219px;
+            height: 109px;
+            position: absolute;
+            top: 71px;
+            left: 740px;
+            background-image: url('https://lolstatic-a.akamaihd.net/frontpage/apps/prod/harbinger-l10-website/en-us/production/en-us/static/items-93b72410a63044875fb44bf1818b112a.png');
+            background-size: cover;
+            background-position: center;
+
+
+        }
+
+
+        #Items-mask {
+            width: 220px;
+            height: 111px;
+            background-color: rgba(0, 0, 0, 0.3);
+            transition: 0.3s;
+            z-index: 10;
+            position: absolute;
+            top: 23%;
+            left: 74%;
+
+        }
+
+
+        input {
+
+            position: absolute;
+            bottom: 0px;
+            z-index: 25;
+            opacity: 0;
+        }
+
+
+
+
+        #pic-btn-QWER {
+            width: 200px;
+            height: 200px;
+            left: 30%;
+            top: 10%;
+        }
+
+        #pic-btn-DF {
+            width: 150px;
+            height: 150px;
+            left: 57%;
+            top: 10%;
+        }
+
+        #pic-btn-DF:hover~#DF-mask {
+            background-color: rgba(0, 0, 0, 0);
+
+        }
+
+        #pic-btn-QWER:hover~#QWER-mask {
+            background-color: rgba(0, 0, 0, 0);
+
+        }
+
+        #pic-btn-Items:hover~#Items-mask {
+            background-color: rgba(0, 0, 0, 0);
+
+        }
+
+        #pic-btn-DF:active~#DF-mask {
+            background-color: rgba(255, 255, 255, 0.3);
+
+        }
+
+        #pic-btn-QWER:active~#QWER-mask {
+            background-color: rgba(255, 255, 255, 0.3);
+
+        }
+
+        #pic-btn-Items:active~#Items-mask {
+            background-color: rgba(255, 255, 255, 0.3);
+
+        }
+
+
+
+        #pic-btn-Items {
+            width: 180px;
+            height: 180px;
+            left: 76%;
+            top: 13%;
+        }
+
+        #pic-btn-QWER:checked~.showbox {
+
+            transform: scale(1, 1);
+
+
+            background-image: url('../2020-08-28-一頁式網站/一頁式素材/技能.png');
+            background-position: top;
+            background-size: cover;
+
+
+        }
+
+        #pic-btn-DF:checked~.showbox {
+
+            transform: scale(1, 1);
+
+
+            background-image: url('../2020-08-28-一頁式網站/一頁式素材/召喚師技能.png');
+            background-position: center;
+            background-size: cover;
+
+        }
+
+        #pic-btn-Items:checked~.showbox {
+            transform: scale(1, 1);
+
+
+            background-image: url('https://i.imgur.com/MhMHO.png');
+            background-position: center;
+            background-size: cover;
+
+        }
+
+
+
+
+        #section3 {
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            background-image: url('https://images5.alphacoders.com/402/402087.jpg');
+            background-attachment: fixed;
+            position: relative;
+
+
+        }
+
+
+
+
+
+
+
+        #section4 {
+            background-image: url('https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt000c86b25cd80cbf/5f18db848459893a6ca82d4f/SB_event_redirect_banner.jpg');
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+
+        }
+
+        #sec4-title {
+            position: absolute;
+            top: 3%;
+            left: calc(50% - 116px);
+            font-size: 48px;
+            font-family: Microsoft JhengHei;
+            color: rgb(255, 255, 255);
+            background-color: rgba(128, 128, 128, 0.842);
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        #section5 {
+            width: 100%;
+            height: calc(100vh - 100px);
+
+
+
+        }
+
+        #section5 .container {
+            width: 400px;
+
+            position: relative;
+        }
+
+        .fullscreen-bg {
+
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: -100;
+            background-color: black;
+        }
+
+
+        .fullscreen-bg-video {
+
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+
+        }
+
+
+
+
+
+        #section5 .img {
+            width: 181px;
+            height: 65px;
+
+            float: left;
+            margin: 20px 0 0 60px;
+            position: absolute;
+            top: 38.5%;
+            left: 27.5%;
+            border: 1px solid white;
+            border-top-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            transition: 0.3s;
+        }
+
+
+
+        #section5 .text {
+
+            color: #551A8B;
+            background-color: rgb(19, 216, 246);
+            position: absolute;
+            top: calc(50% - 87px);
+            left: calc(50% - 27px);
+            padding: 10px;
+            font-size: 30px;
+            z-index: 10;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            border-top-right-radius: 40px;
+            border-bottom-left-radius: 40px;
+            transition: 0.3s;
+        }
+
+        #section5 .text::after {
+            content: '';
+            width: 0px;
+            height: 0px;
+
+            border-left: 0px solid black;
+            border-bottom: 0px solid black;
+            position: absolute;
+            bottom: -12%;
+            left: -3%;
+            /* transform: translateX(-50%); */
+            transition: 0.5s;
+
+        }
+
+        #section5 .text:hover:after {
+            width: 30px;
+            height: 30px;
+
+
+            border-left: 1px solid rgb(255, 255, 255);
+            border-bottom: 1px solid rgb(255, 255, 255);
+        }
+
+        #section5 .text::before {
+            content: '';
+            width: 0px;
+            height: 0px;
+
+            border-right: 0px solid rgb(255, 255, 255);
+            border-top: 0px solid rgb(255, 255, 255);
+            position: absolute;
+            bottom: 52%;
+            left: 85%;
+            transition: 0.5s;
+
+        }
+
+        #section5 .text:hover::before {
+            width: 30px;
+            height: 30px;
+
+
+            border-right: 1px solid rgb(255, 255, 255);
+            border-top: 1px solid rgb(255, 255, 255);
+        }
+
+
+
+
+
+
+        #section5 .text:hover {
+
+            color: #56198bb2;
+            background-color: rgb(11, 198, 227);
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+
+        #section5 .text:hover~.img {
+
+
+            border-top-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            border-top-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+        }
+
+        #section5 a {
+            text-decoration: none;
+        }
+
+        #footer {
+            width: 100%;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 18px;
+            font-family: Microsoft JhengHei;
+            font-weight: 700;
+
+
+
+
+            background-image: url('https://rgmerch-a.akamaihd.net/media/site/background/footer-bg-fade.png');
+            background-position: top;
+            background-size: cover;
+        }
+
+        #section4 .container {
+            background-color: rgba(0, 0, 0, 0.356);
+
+            height: calc(100vh - 200px);
+            border-radius: 50px;
+
+            display: flex;
+            position: absolute;
+            top: 150px;
+            left: calc(50% - 640px);
+            padding: 0px 100px 20px 100px;
+            flex-wrap: wrap;
+            align-content: space-around;
+            justify-content: space-around;
+
+        }
+
+
+
+
+        .port-items-1,
+        .port-items-2,
+        .port-items-3,
+        .port-items-4,
+        .port-items-5,
+        .port-items-6 {
+            /* background-color: yellowgreen; */
+            width: 300px;
+            height: 330px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+
+        }
+
+        #section4 .container img {
+            transition: 0.3s;
+
+
+        }
+
+        #section4 .container img:hover {
+            transform: scale(1.2, 1.2)
+        }
+
+
+        .port-desc {
+
+            margin: 0;
+            position: absolute;
+
+        }
+
+
+
+
+        .port-title {
+            width: 300px;
+
+            font-size: 30px;
+            position: absolute;
+            top: 86%;
+            left: 0%;
+            color: white;
+            background-color: #242526;
+            padding: 5px 0 5px 0;
+            text-align: center;
+            border-radius: 10px;
+
+
+        }
+
+        .port-lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.3);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform ease-in-out 300ms;
+            transform: scale(1, 0);
+            transform-origin: center;
+        }
+
+        .port-lightbox:target {
+
+            transform: scale(1, 1);
+        }
+
+        .port-lightboxes img {
+            border-radius: 10px;
+        }
+
+
+
+        .port-light-content {
+            width: 550px;
+            height: 800px;
+
+            background: black;
+            padding: 10px;
+            position: relative;
+            border-radius: 40px;
+        }
+
+        .port-light-content img {
+
+
+            background: black;
+            padding: 10px;
+            position: absolute;
+            top: 5%;
+            left: calc(50% - 250px);
+        }
+
+        .port-lightbox-title {
+            position: absolute;
+            top: 40%;
+            left: 45%;
+
+        }
+
+        .port-lightbox-contents {
+            position: absolute;
+            top: 50%;
+        }
+
+        .close {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: red;
+            border-radius: 50%;
+            top: -20px;
+            right: -20px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .close::after {
+            content: 'X';
+            color: white;
+            font-weight: 700;
+
+
+        }
+
+        .container {
+            width: 1280px;
+            height: 100vh;
+
+            margin: 0 auto;
+        }
+
+        #GOtotop {
+            width: 100px;
+            height: 100px;
+            background-color: rgba(255, 255, 255, 0.4);
+            z-index: 999;
+            position: fixed;
+            top: 80%;
+            left: 90%;
+            font-size: 50px;
+            font-weight: 900;
+            line-height: 100px;
+            padding: 0 10px;
+            box-sizing: border-box;
+            border-radius: 50%;
+            text-decoration: none;
+            color: black;
+            transition: 0.3s;
+
+        }
+
+        #GOtotop:hover {
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        #GOtotop:active {
+            background-color: rgb(255, 255, 255);
+        }
+
+        #GOtotop::before {
+            content: '';
+            width: 0px;
+            height: 3px;
+
+            position: absolute;
+            bottom: 26%;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: 0.3s;
+
+        }
+
+        #GOtotop:hover::before {
+            content: '';
+            width: 80px;
+            height: 3px;
+            background-color: rgb(255, 0, 0);
+            color: red;
+            position: absolute;
+            bottom: 26%;
+            left: 50%;
+            transform: translateX(-50%);
+
+        }
+
+        @media(max-width: 1280px) {
+            .container {
+                width: 960px;
+                height: 100vh;
+
+
+            }
+
+            #section1 video {
+                height: 100%;
+                width: 86%;
+                position: absolute;
+                left: 25%;
+            }
+
+            #section1 .title {
+                font-size: 30px;
+                position: absolute;
+                left: 286px;
+                top: 50px;
+
+
+            }
+
+            #section1 .title::before {
+                width: 260px;
+                left: -71%;
+                height: 8px;
+            }
+
+            #section1 .title::after {
+                width: 260px;
+                left: 102%;
+                height: 8px;
+            }
+
+            #section1 .text {
+                left: 20%;
+                top: 80%;
+            }
+
+            video {
+                width: 75%;
+                position: absolute;
+                left: 25%;
+            }
+
+            #sc1-img-2 {
+                width: 450px;
+                background-position: left;
+            }
+
+            #sc1-img-1 {
+                width: 300px;
+            }
+
+            #GOtotop {
+                position: fixed;
+                left: 85%;
+                top: 85%;
+
+            }
+
+
+
+            #section2 .text {
+                width: 960px;
+            }
+
+            #QWER {
+                width: 363px;
+                height: 71px;
+                top: 73px;
+                left: 185px;
+
+            }
+
+            #QWER-mask {
+                width: 365px;
+                height: 71px;
+                top: 24%;
+                left: 19%;
+
+            }
+
+            #DF {
+                left: 564px;
+            }
+
+            #DF-mask {
+                width: 114px;
+                height: 59px;
+
+            }
+
+            #pic-btn-DF {
+                width: 110px;
+                left: 59%;
+                height: 110px;
+            }
+
+            #Items {
+                width: 211px;
+                height: 114px;
+                top: 71px;
+                left: 708px;
+
+            }
+
+            #Items-mask {
+                width: 208px;
+                height: 112px;
+            }
+
+            #section4 .container {
+                left: calc(50% - 480px);
+            }
+
+            #section4 .container img {
+                width: 220px;
+            }
+
+            .port-items-1,
+            .port-items-2,
+            .port-items-3,
+            .port-items-4,
+            .port-items-5,
+            .port-items-6 {
+                width: 220px;
+                height: 255px;
+            }
+
+            .port-title {
+                width: 220px;
+                font-size: 28px;
+            }
+
+            .port-lightbox video {
+                width: 500px;
+                height: 300px;
+
+            }
+
+            #section5 .text {
+                top: 40.5%;
+                left: 32%;
+            }
+
+            #section5 .img {
+                left: 15.5%;
+                top: 37.75%;
+            }
+
+            ul li {
+                margin: 0 10px 0 0;
+            }
+
+            ul {
+                padding-left: 15%;
+            }
+
+
+        }
+
+        @media(max-width: 960px) {
+
+            .container {
+                width: 576px;
+            }
+
+            #LOGO {
+                left: 30%;
+            }
+
+            #bar li {
+                width: 100px;
+                font-size: 20px;
+            }
+
+            #bar li:hover::before {
+                width: 90px;
+                height: 8px;
+            }
+
+            #section1 .title {
+                left: 101px;
+                top: 100px;
+            }
+
+            #section1 .title::before {
+                width: 80px;
+                left: -24%;
+            }
+
+            #section1 .title::after {
+                width: 80px;
+            }
+
+            #section1 .text {
+                width: 570px;
+                left: 0.5%;
+                top: 75%
+            }
+
+            #section1 video {
+                width: 576px;
+                left: 55%;
+            }
+
+            .showbox {
+                width: 576px;
+                left: 0%;
+                bottom: 70%;
+            }
+
+            #section2 .title {
+                font-size: 40px;
+                padding-left: 160px;
+            }
+
+            #pic-btn-DF:checked~.showbox {
+                background-position: left;
+            }
+
+            #pic-btn-QWER:checked~.showbox {
+                background-position: left;
+            }
+
+            #section2 .text {
+                width: 576px;
+            }
+
+            #pic-btn-QWER {
+                width: 130px;
+                height: 130px;
+                left: 27%;
+                top: 16%;
+            }
+
+            #pic-btn-DF {
+                width: 70px;
+                left: 57%;
+                top: 20%;
+            }
+
+            #pic-btn-Items {
+                width: 110px;
+                left: 74%;
+                top: 12%;
+            }
+
+            #QWER {
+                width: 217px;
+                height: 44px;
+                top: 105px;
+                left: 111px;
+            }
+
+            #QWER-mask {
+                width: 220px;
+                height: 45px;
+                top: 34%;
+                left: 19%;
+            }
+
+            #DF {
+                width: 70px;
+                height: 35px;
+                left: 336px;
+                top: 104px;
+            }
+
+            #DF-mask {
+                width: 70px;
+                height: 36px;
+                top: 34%;
+                left: 58%;
+            }
+
+            #Items {
+                width: 129px;
+                height: 60px;
+                top: 107px;
+                left: 423px;
+            }
+
+            #Items-mask {
+                width: 127px;
+                height: 66px;
+                top: 35%;
+                left: 74%;
+            }
+
+            #section4 .container {
+                left: calc(50% - 288px);
+            }
+
+            #section4 .container img {
+                width: 220px;
+            }
+
+            .port-items-1,
+            .port-items-2,
+            .port-items-3,
+            .port-items-4,
+            .port-items-5,
+            .port-items-6 {
+                width: 180px;
+                height: 180px;
+            }
+
+            .port-title {
+                width: 180px;
+                font-size: 20px;
+                top: 81%;
+            }
+
+
+
+            #section2 .container {
+                width: 576px;
+                height: 100vh;
+                background-attachment: fixed;
+                background-position: center;
+
+            }
+
+            #sc2-filter {
+                display: none;
+            }
+
+            #section1 {
+                overflow: hidden;
+            }
+
+            #sc1-img-2 {
+                width: 250px;
+                background-position: center;
+            }
+
+            #sc1-img-1 {
+                width: 300px;
+            }
+
+
+            #section2 {
+                background-color: rgb(182, 182, 182);
+            }
+
+            #GOtotop {
+                width: 80px;
+                height: 80px;
+                padding: 0 5px;
+                font-size: 30px;
+                line-height: 80px;
+                text-align: center;
+                left: 80%;
+            }
+
+            ul li {
+                margin: 0;
+            }
+
+            ul {
+                padding-left: 18%;
+            }
+
+            .port-items-1 .port-desc {
+                top: -10%;
+                left: -10%;
+            }
+
+            .port-items-2 .port-desc {
+                top: 0%;
+                left: -13%;
+            }
+
+            .port-items-3 .port-desc {
+                top: -13%;
+                left: -22%;
+            }
+
+            .port-items-4 .port-desc {
+                top: 0%;
+                left: -13%;
+            }
+
+            .port-items-5 .port-desc {
+                top: 0%;
+                left: 0%;
+            }
+
+            .port-items-6 .port-desc {
+                top: 0%;
+                left: -10%;
+            }
+
+
+            @media(max-width: 576px) {
+                .container {
+                    width: 100%;
+                }
+
+
+                #LOGO {
+                    width: 240px;
+                    height: 331px;
+                    left: 10%;
+                }
+
+
+
+                #section2 .title {
+                    margin: 0 0 450px 0;
+                    padding-left: 135px;
+                }
+
+                #section2 .container {
+                    width: 100%;
+                }
+
+                #section2 .text {
+                    width: 100%;
+                }
+
+                #QWER {
+                    left: 16%;
+                    top: 36%;
+                    width: 202px;
+                    height: 41px;
+
+                }
+
+                #QWER-mask {
+                    width: 200px;
+                    height: 40px;
+                    top: 36%;
+                    left: 16%;
+                }
+
+
+
+                #DF {
+                    left: 58%;
+                    top: 36.5%;
+                }
+
+                #DF-mask {
+                    width: 70px;
+                    height: 35px;
+                    top: 36%;
+                    left: 58%;
+                }
+
+                #Items {
+                    width: 117px;
+                    height: 60px;
+                    top: 36%;
+                    left: 76.5%;
+                }
+
+                #Items-mask {
+                    width: 116px;
+                    height: 60px;
+                    top: 36%;
+                    left: 76%;
+                }
+
+
+
+                #pic-btn-DF {
+                    left: 59%;
+                }
+
+                #pic-btn-Items {
+                    left: 76%;
+                }
+
+
+
+                .showbox {
+                    width: 100%;
+                }
+
+                #section1 .text {
+                    width: 100%;
+
+                }
+
+                #section1 .title {
+                    font-size: 25px;
+                    left: 80px;
+
+                }
+
+                #section1 .title::before {
+                    width: 60px;
+                    left: -22%;
+
+
+
+                }
+
+                #section1 .title::after {
+                    width: 60px;
+                }
+
+                #section4 .container {
+                    width: 100%;
+                    left: 0;
+                    border-radius: 0%;
+                    height: 100vh;
+                    padding: 0;
+                    display: block;
+                }
+
+
+
+                .port-items-1,
+                .port-items-2,
+                .port-items-3,
+                .port-items-4,
+                .port-items-5,
+                .port-items-6 {
+                    width: 100%;
+                    height: 135px;
+
+                }
+
+                .port-title {
+                    width: 6%;
+                    font-size: 25px;
+                    top: 0%;
+                    left: 94%;
+                    height: 135px;
+                    padding-top: 25px;
+
+                }
+
+                .port-items-1 .port-desc {
+                    top: -149%;
+                }
+
+                .port-items-2 .port-desc {
+                    top: -30%;
+                    left: -7%;
+                }
+
+                .port-items-3 .port-desc {
+                    top: -77%;
+                    left: -3%;
+                }
+
+                .port-items-4 .port-desc {
+                    top: -12%;
+                    left: -1%;
+                }
+
+                .port-items-5 .port-desc {
+                    top: -73%;
+                }
+
+                .port-items-6 .port-desc {
+                    top: 0%;
+                }
+
+                #section4 .container img {
+
+                    width: 168%;
+                    height: 100%;
+
+                }
+
+                #bar {
+                    position: relative;
+                    background-color: black;
+                    padding: 0;
+                }
+
+                #menu-btn {
+                    background-color: rgb(124, 124, 124);
+                    height: 100%;
+                    width: 100px;
+                    position: absolute;
+                    left: 0%;
+                    color: white;
+                    font-size: 30px;
+                    line-height: 100px;
+                    text-align: center;
+                    transition: 0.3s;
+
+                }
+
+                #menu-btn:hover {
+                    color: rgb(0, 0, 0);
+                    background-color: rgb(182, 180, 180);
+                }
+
+                ul {
+                    display: none;
+                    justify-content: start;
+                    flex-direction: column;
+                    position: absolute;
+                    top: -200px;
+                    padding: 0;
+                }
+
+                ul li {
+                    height: 50px;
+                    display: list-item;
+                    background-color: rgb(80, 77, 77);
+                    z-index: 99999;
+                    border-radius: 10px;
+                    margin: 0;
+                    width: 80px;
+                    line-height: 50px;
+                    float: none;
+                }
+
+                #bar li:hover::before {
+                    width: 90px;
+                    height: 4px;
+                }
+
+                #bar li::before {
+                    height: 4px;
+                }
+
+                #menu-btn:hover~ul {
+                    display: block;
+
+                }
+
+                ul:hover {
+                    display: block;
+                }
+
+                .coverflow {
+                    width: 576px;
+                    height: 21%;
+                    position: relative;
+                    left: 50%;
+                    top: 21%;
+                    transform: translatex(-50%);
+                }
+
+                #section2 .title {
+                    width: 100%;
+                    padding: 0 0 0 20%;
+                }
+
+            }
+
+
+
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div id="nav">
+            <div id="LOGO"></div>
+        </div>
+        <div id="BOX"></div>
+        <div id="banner">
+            <div class="coverflow">
+                <a href="#"><img src="https://i.pinimg.com/originals/2d/95/bb/2d95bb81ddeb0d24afdba6f05a0b6f42.jpg"></a>
+                <a href="#"><img src="https://www.mobafire.com/images/champion/skins/landscape/ryze-skt.jpg"></a>
+                <a href="#"><img src="https://i.ytimg.com/vi/oQFzSBOQVNk/maxresdefault.jpg"></a>
+            </div>
+
+        </div>
+        <div id="bar">
+            <div id="menu-btn">選單</div>
+            <ul>
+                <li><a href="#section1">關於我們
+
+                    </a></li>
+                <li><a href="#section2">如何遊玩
+
+                </li>
+                </a>
+                <li><a href="#section4">英雄介紹
+
+                </li>
+                </a>
+                <li><a href="#section5">免費遊玩
+
+                </li>
+                </a>
+            </ul>
+
+        </div>
+
+    </header>
+
+    <main>
+        <section>
+            <div id="section1">
+                <div id="sc1-img-1"></div>
+                <div id="sc1-img-2"></div>
+                <div class="container">
+                    <div class="img">
+                        <video width="100%" height="900px" muted autoplay loop>
+
+                            <source
+                                src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/harbinger-l10-website/en-us/production/en-us/static/hero-0632cbf2872c5cc0dffa93d2ae8a29e8.webm"
+                                type="video/ogg">
+
+                        </video>
+                    </div>
+                    <div class="title">WHAT IS LEAGUE OF LEGENDS?</div>
+                    <div class="text">
+                        《英雄聯盟》（英文：League of Legends，簡稱LoL）是由Riot Games開發及發行的一款多人線上戰術擂台（MOBA）遊戲，遊戲為免費模式進行並提供付費道具服務。
+                        該遊戲是受到《魔獸爭霸III：寒冰霸權》中一個名為DotA第三方自定義地圖啟發而誕生，且至今仍不斷定期更新。
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+
+            <div id="section2">
+                <div id="sc2-filter"></div>
+                <div class="container">
+                    <div class="title">激發你的戰鬥力</div>
+                    <div id="text-img"></div>
+                    <div class="text">
+
+
+                        <input id="pic-btn-QWER" type="radio" name="fake-btn">
+                        <div id="QWER-mask"></div>
+
+
+                        <input id="pic-btn-DF" type="radio" name="fake-btn">
+                        <div id="DF-mask"></div>
+
+                        <input id="pic-btn-Items" type="radio" name="fake-btn">
+                        <div id="Items-mask"></div>
+
+                        <div id="QWER" class="pic">
+                        </div>
+                        <div id="DF" class="pic">
+
+
+                        </div>
+                        <div id="Items" class="pic">
+                        </div>
+                        <!-- <div id="fpage" class="pic">
+                                狀態列說明
+                            </div> -->
+                        <div class="showbox"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        </section>
+        <section>
+            <div id="section3">
+                <div class="container">
+                </div>
+            </div>
+        </section>
+        <section>
+            <div id="section4">
+
+
+                <div id="sec4-title">英雄介紹</div>
+                <div class="container">
+                    <div class="port-items-1">
+
+                        <div class="port-desc">
+
+                            <a href="#port-item-1" class="btn"><img
+                                    src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt570145160dd39dca/5db05fa8347d1c6baa57be25/RiotX_ChampionList_aatrox.jpg?quality=90&width=300"
+                                    alt=""></a>
+                        </div>
+                        <div class="port-title">
+                            厄煞斯
+                        </div>
+
+                    </div>
+
+                    <div class="port-items-2">
+
+                        <div class="port-desc">
+
+                            <a href="#port-item-2" class="btn"><img
+                                    src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt3925b81c7462e26e/5db05ffadc674266df3d5d42/RiotX_ChampionList_riven.jpg?quality=90&width=300"
+                                    alt=""></a>
+                        </div>
+                        <div class="port-title">雷玟</div>
+                    </div>
+
+
+                    <div class="port-items-3">
+
+                        <div class="port-desc">
+
+                            <a href="#port-item-3" class="btn"><img
+                                    src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt3a319fc884dc6880/5db0601c242f426df132f985/RiotX_ChampionList_yasuo.jpg?quality=90&width=300"
+                                    alt=""></a>
+                        </div>
+                        <div class="port-title">犽宿</div>
+                    </div>
+                    <div class="port-items-4">
+
+                        <div class="port-desc">
+
+                            <a href="#port-item-4" class="btn"> <img
+                                    src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltf8ea29aa48fc5e35/5db0600cadc8656c7d24e808/RiotX_ChampionList_sylas.jpg?quality=90&width=300"
+                                    alt=""></a>
+                        </div>
+                        <div class="port-title">賽勒斯</div>
+
+                    </div>
+
+                    <div class="port-items-5">
+
+                        <div class="port-desc">
+
+                            <a href="#port-item-5" class="btn"> <img
+                                    src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt30ddbbdc0549078a/5db0600da6470d6ab91ce5b8/RiotX_ChampionList_teemo.jpg?quality=90&width=300"
+                                    alt=""></a>
+                        </div>
+                        <div class="port-title">提摩</div>
+                    </div>
+
+
+                    <div class="port-items-6">
+
+                        <div class="port-desc">
+
+                            <a href="#port-item-6" class="btn"> <img
+                                    src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt5890d1ab5c8be01f/5db05fc6823d426762825fe5/RiotX_ChampionList_galio.jpg?quality=90&width=300"
+                                    alt=""></a>
+                        </div>
+                        <div class="port-title">加里歐</div>
+
+                    </div>
+                </div>
+
+
+
+
+
+
+
+                <div class="port-lightboxes">
+                    <div class="port-lightbox" id="port-item-1">
+                        <div class="port-light-content">
+                            <a href="#section4" class="close"></a>
+                            <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg?quality=90&width=250"
+                                width="500" height="300" alt="">
+                            <div class="port-lightbox-title">
+                                <h1>厄煞斯</h1>技能展示
+                            </div>
+                            <p class="port-lightbox-contents">
+                                <video width="100%" height="350px" muted autoplay loop>
+
+                                    <source
+                                        src="https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_Q1.webm"
+                                        type="video/ogg">
+
+                                </video>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="port-lightboxes">
+                    <div class="port-lightbox" id="port-item-2">
+                        <div class="port-light-content">
+                            <a href="#section4" class="close"></a>
+                            <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Riven_0.jpg"
+                                width="500px" height="300px" alt="">
+                            <div class="port-lightbox-title">
+                                <h1>雷 玟</h1>技能展示
+                            </div>
+                            <p class="port-lightbox-contents">
+                                <video width="100%" height="350px" muted autoplay loop>
+
+                                    <source
+                                        src="https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0092/ability_0092_Q1.webm"
+                                        type="video/ogg">
+
+                                </video>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="port-lightboxes">
+                    <div class="port-lightbox" id="port-item-3">
+                        <div class="port-light-content">
+                            <a href="#section4" class="close"></a>
+                            <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yasuo_0.jpg"
+                                width="500px" height="300px" alt="">
+                            <div class="port-lightbox-title">
+                                <h1>犽 宿</h1>技能展示
+                            </div>
+                            <p class="port-lightbox-contents">
+                                <video width="100%" height="350px" muted autoplay loop>
+
+                                    <source
+                                        src="https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0157/ability_0157_R1.webm"
+                                        type="video/ogg">
+
+                                </video>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="port-lightboxes">
+                    <div class="port-lightbox" id="port-item-4">
+                        <div class="port-light-content">
+                            <a href="#section4" class="close"></a>
+                            <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Sylas_0.jpg"
+                                width="500px" height="300px" alt="">
+                            <div class="port-lightbox-title">
+                                <h1>賽勒斯</h1>技能展示
+                            </div>
+                            <p class="port-lightbox-contents">
+                                <video width="100%" height="350px" muted autoplay loop>
+
+                                    <source
+                                        src="https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0517/ability_0517_P1.webm"
+                                        type="video/ogg">
+
+                                </video>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="port-lightboxes">
+                    <div class="port-lightbox" id="port-item-5">
+                        <div class="port-light-content">
+                            <a href="#section4" class="close"></a>
+                            <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Teemo_0.jpg"
+                                width="500px" height="300px" alt="">
+                            <div class="port-lightbox-title">
+                                <h1>提 摩</h1>技能展示
+                            </div>
+                            <p class="port-lightbox-contents">
+                                <video width="100%" height="350px" muted autoplay loop>
+
+                                    <source
+                                        src="https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0017/ability_0017_R1.webm"
+                                        type="video/ogg">
+
+                                </video>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="port-lightboxes">
+                    <div class="port-lightbox" id="port-item-6">
+                        <div class="port-light-content">
+                            <a href="#section4" class="close"></a>
+                            <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Galio_0.jpg"
+                                width="500px" height="300px" alt="">
+                            <div class="port-lightbox-title">
+                                <h1>加里歐</h1>技能展示
+                            </div>
+                            <p class="port-lightbox-contents">
+                                <video width="100%" height="350px" muted autoplay loop>
+
+                                    <source
+                                        src="https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0003/ability_0003_R1.webm"
+                                        type="video/ogg">
+
+                                </video>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+        <section>
+            <div id="section5">
+                <div class="fullscreen-bg">
+                    <video muted autoplay loop class="fullscreen-bg-video">
+
+                        <source
+                            src="https://assets.contentstack.io/v3/assets/blt731acb42bb3d1659/bltbb792e3456cb02b7/5f4959269586f1653fc65a1b/ss2020_urgot_vi_cait_1920x1080.mp4"
+                            type="video/ogg">
+
+                    </video>
+
+
+
+                </div>
+
+                <div class="container">
+                    <div class="text"> <a target="_blank"
+                            href="https://signup.na.leagueoflegends.com/en/signup/index#/">Play for
+                            free</a> </div>
+
+                    <div class="img"></div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div id="footer">本網頁僅供練習使用</div>
+    </footer>
+
+    <a href="#">
+        <div id="GOtotop">
+            Top
+
+        </div>
+    </a>
+
+</body>
+
+</html>
