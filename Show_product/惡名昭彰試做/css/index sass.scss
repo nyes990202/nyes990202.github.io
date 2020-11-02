@@ -622,6 +622,7 @@ html {
 @media (max-width: 576px){
     #index_banner #bottom_nav {
         width: 100% !important;
+        margin: 0 !important;
     }
 
     #rightfooter_content {
@@ -659,6 +660,10 @@ html {
     &:hover{
         background-color: gray;
         
+    }
+    a{
+    white-space:nowrap;
+
     }
 }
 

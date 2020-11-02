@@ -796,6 +796,7 @@ html {
 @media (max-width: 576px) {
   #index_banner #bottom_nav {
     width: 100% !important;
+    margin: 0 !important;
   }
   #rightfooter_content {
     padding: 0 0 0 50px;
@@ -827,5 +828,9 @@ html {
 
 .text-hover:hover {
   background-color: gray;
+}
+
+.text-hover a {
+  white-space: nowrap;
 }
 /*# sourceMappingURL=index sass.css.map */
